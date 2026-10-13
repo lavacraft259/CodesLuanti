@@ -1,0 +1,6 @@
+server/games/mineclonia/
+server/worlds/*
+!server/worlds/.gitkeep
+server/debug.txt
+server/auth.sqlite
+server/ipban.txt

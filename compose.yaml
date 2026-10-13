@@ -1,0 +1,15 @@
+services:
+  mineclonia:
+    image: lscr.io/linuxserver/luanti:latest
+    container_name: mineclonia-server
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      TZ: America/Argentina/Cordoba
+      CLI_ARGS: "--gameid mineclonia --worldname world --port 30000"
+    volumes:
+      - ./server:/config/.minetest
+    ports:
+      - "30000:30000/udp"
+    restart: unless-stopped
+    stop_grace_period: 30s
